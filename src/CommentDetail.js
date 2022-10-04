@@ -1,7 +1,7 @@
 import React from "react";
 import { faker } from '@faker-js/faker';
 
-const CommentDetail = () => {
+const CommentDetail = (props) => {
     return (
         <div className="comment">
             <a href="/" className="avatar">
@@ -9,7 +9,7 @@ const CommentDetail = () => {
             </a>
             <div className="content">
                 <a href="/" className="author">
-                    {faker.name.firstName()}
+                    {props.authorFirstName || faker.name.firstName()}
                 </a>
                 <div className="metadata">
                     <span className="date">Today at 7:00PM</span>
