@@ -12,10 +12,10 @@ const CommentDetail = (props) => {
                     {props.authorFirstName || faker.name.firstName()}
                 </a>
                 <div className="metadata">
-                    <span className="date">Today at 7:00PM</span>
+                    <span className="date">{props.timeAgo || "Today at 7:00PM"}</span>
                 </div>
                 <div className="text">
-                    {faker.hacker.phrase()}
+                    {props.commentText || faker.hacker.phrase()}
                 </div>
             </div>
         </div>
